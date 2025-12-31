@@ -1,0 +1,23 @@
+{
+    "account": {
+        "initial_capital": 1000.0,
+        "backtest_days": 365,
+        "paper_mode": true,
+	"recurring_investment": {
+            "enabled": true,
+            "amount": 250.0,
+            "interval_days": 30
+        }
+    },
+    "universe": {
+        "stocks": [
+            "AMZN", "QQQ", "NVDA"
+        ],
+        "crypto": [
+            "BTC/USD"
+        ]
+    },
+    "strategy": {
+        "default": "1"
+    }
+}

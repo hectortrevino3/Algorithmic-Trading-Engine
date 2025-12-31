@@ -1,0 +1,4 @@
+numpy
+pandas
+alpaca-trade-api
+requests
