@@ -10,7 +10,7 @@ from alpaca.data.historical import StockHistoricalDataClient, CryptoHistoricalDa
 from data.feed import load_bars
 from execution.trader import init_trader
 from strategy.indicators import prepare_data
-from strategy.loader import load_strategy, get_strategy_name
+from strategy.loader import STRATEGY_MAP, load_strategy, get_strategy_name
 from backtest.portfolio import run_portfolio_simulation, write_portfolio_backtest
 from config import (
     BACKTEST_DAYS, CREDENTIALS_FILE, RECURRING_INVESTMENT, STOCK_LIST, CRYPTO_LIST, FULL_UNIVERSE,
@@ -210,7 +210,7 @@ def main_menu():
                 except KeyboardInterrupt: pass
         
         elif choice == "3":
-            print("1: Strategy1 | 2: Strategy2 | 3: Strategy3")
+            print(f"1: {get_strategy_name(1)} | 2: {get_strategy_name(2)} | 3: {get_strategy_name(3)}")
             sel = input("ID: ")
             mod = load_strategy(sel)
             if mod:
